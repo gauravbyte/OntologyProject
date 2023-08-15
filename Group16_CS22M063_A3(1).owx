@@ -1,0 +1,1234 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/sathish/ontologies/2023/3/ecommerce"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/sathish/ontologies/2023/3/ecommerce">
+    <Prefix name="" IRI="http://www.semanticweb.org/sathish/ontologies/2023/3/ecommerce/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This is an ontology about Ecommerce</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="/address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/bank_transfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/bank_transfer_info"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/best_seller"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/billing_information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/brand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/cancelled"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/credit_card"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/credit_card_info"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/customer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/delivery_agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/digital_product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/domestic_customer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/express_shipping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/international_customer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/non_prime_customer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/offered_product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/order"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/order_status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/payment_method"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/paypal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/paypal_info"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/pending"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/physical_product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/prime_customer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/prime_offered"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/prime_subscription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/returned"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/same_day_shipping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/shipped"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/shipping_info"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/shipping_options"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/standard_shippping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/subscription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/vendor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_billinginformation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_paymentmethod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_shipping_option"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/belongs_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/cancel_order"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/delivered_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/delivers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/delivers_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/discount_provided_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/has_address"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/has_orderstatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/has_product"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/has_shippinginfo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/has_subscription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/ordered_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/place_order"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/sells"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/sold_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/sold_to"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#category"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#price"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#product_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#product_rating"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#quantity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#vendor_rating"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#address1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#airpods"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#amay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#aniket"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#apple"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#apr24"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#chennai"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#gaurav"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#iphone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#jagan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#macbook"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#notepad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#order1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#order2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#order3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#order4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#order5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#order6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#order7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pay1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#playstation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prime1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#raj"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rajesh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rishabh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#satish"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sbicard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#shipp23"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#shirt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#shoes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sri_ram"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sship1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#suresh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#veena"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#venu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#watch"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="/bank_transfer"/>
+        <Class IRI="/payment_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/bank_transfer_info"/>
+        <Class IRI="/billing_information"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/best_seller"/>
+        <Class IRI="/product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/best_seller"/>
+        <ObjectMinCardinality cardinality="100">
+            <ObjectProperty IRI="/ordered_by"/>
+            <Class IRI="/customer"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/brand"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/has_product"/>
+            <Class IRI="/product"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/cancelled"/>
+        <Class IRI="/order_status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/credit_card"/>
+        <Class IRI="/payment_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/credit_card_info"/>
+        <Class IRI="/billing_information"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/customer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/has_address"/>
+            <Class IRI="/address"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/customer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/place_order"/>
+            <Class IRI="/order"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/customer"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="/cancel_order"/>
+            <Class IRI="/order"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/delivery_agent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/delivers"/>
+            <Class IRI="/order"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/delivery_agent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/delivers_to"/>
+            <Class IRI="/shipping_info"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/digital_product"/>
+        <Class IRI="/product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/domestic_customer"/>
+        <Class IRI="/customer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/express_shipping"/>
+        <Class IRI="/shipping_options"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/international_customer"/>
+        <Class IRI="/customer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/non_prime_customer"/>
+        <Class IRI="/customer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/offered_product"/>
+        <Class IRI="/product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/offered_product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/discount_provided_by"/>
+            <Class IRI="/vendor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/order"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_billinginformation"/>
+            <Class IRI="/billing_information"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/order"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_paymentmethod"/>
+            <Class IRI="/payment_method"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/order"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_shipping_option"/>
+            <Class IRI="/shipping_options"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/order"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/contains"/>
+            <Class IRI="/product"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/order"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/has_orderstatus"/>
+            <Class IRI="/order_status"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/order"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/has_shippinginfo"/>
+            <Class IRI="/shipping_info"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/order"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/ordered_by"/>
+            <Class IRI="/customer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/order"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/delivered_by"/>
+            <Class IRI="/delivery_agent"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/paypal"/>
+        <Class IRI="/payment_method"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/paypal_info"/>
+        <Class IRI="/billing_information"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/pending"/>
+        <Class IRI="/order_status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/physical_product"/>
+        <Class IRI="/product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/prime_customer"/>
+        <Class IRI="/customer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/prime_customer"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/has_subscription"/>
+            <Class IRI="/prime_subscription"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/prime_offered"/>
+        <Class IRI="/offered_product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/prime_offered"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/sold_to"/>
+            <Class IRI="/prime_customer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/prime_subscription"/>
+        <Class IRI="/subscription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/belongs_to"/>
+            <Class IRI="/brand"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/sold_by"/>
+            <Class IRI="/vendor"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/product"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#description"/>
+            <Datatype abbreviatedIRI="rdf:langString"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/product"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#product_rating"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/product"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#category"/>
+            <Datatype abbreviatedIRI="rdf:langString"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/product"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#product_name"/>
+            <Datatype abbreviatedIRI="rdf:langString"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/returned"/>
+        <Class IRI="/order_status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/same_day_shipping"/>
+        <Class IRI="/shipping_options"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/shipped"/>
+        <Class IRI="/order_status"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/standard_shippping"/>
+        <Class IRI="/shipping_options"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/vendor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/belongs_to"/>
+            <Class IRI="/brand"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/vendor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/sells"/>
+            <Class IRI="/product"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/vendor"/>
+        <DataAllValuesFrom>
+            <DataProperty IRI="#vendor_rating"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/delivery_agent"/>
+        <Class IRI="/physical_product"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/domestic_customer"/>
+        <Class IRI="/international_customer"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="/shipping_info"/>
+        <NamedIndividual IRI="#address1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/physical_product"/>
+        <NamedIndividual IRI="#airpods"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/customer"/>
+        <NamedIndividual IRI="#amay"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/delivery_agent"/>
+        <NamedIndividual IRI="#aniket"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/brand"/>
+        <NamedIndividual IRI="#apple"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/express_shipping"/>
+        <NamedIndividual IRI="#apr24"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/address"/>
+        <NamedIndividual IRI="#chennai"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/domestic_customer"/>
+        <NamedIndividual IRI="#gaurav"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/product"/>
+        <NamedIndividual IRI="#iphone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/international_customer"/>
+        <NamedIndividual IRI="#jagan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/product"/>
+        <NamedIndividual IRI="#macbook"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/digital_product"/>
+        <NamedIndividual IRI="#notepad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/order"/>
+        <NamedIndividual IRI="#order1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/offered_product"/>
+        <NamedIndividual IRI="#order3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/digital_product"/>
+        <NamedIndividual IRI="#order4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/digital_product"/>
+        <NamedIndividual IRI="#order5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/product"/>
+        <NamedIndividual IRI="#order6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/product"/>
+        <NamedIndividual IRI="#order7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/paypal_info"/>
+        <NamedIndividual IRI="#pay1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/digital_product"/>
+        <NamedIndividual IRI="#playstation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/prime_subscription"/>
+        <NamedIndividual IRI="#prime1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/delivery_agent"/>
+        <NamedIndividual IRI="#raj"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/domestic_customer"/>
+        <NamedIndividual IRI="#rishabh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/prime_customer"/>
+        <NamedIndividual IRI="#satish"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/credit_card"/>
+        <NamedIndividual IRI="#sbicard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/shipping_info"/>
+        <NamedIndividual IRI="#shipp23"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/offered_product"/>
+        <NamedIndividual IRI="#shirt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/physical_product"/>
+        <NamedIndividual IRI="#shoes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/prime_customer"/>
+        <NamedIndividual IRI="#sri_ram"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/shipped"/>
+        <NamedIndividual IRI="#sship1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/customer"/>
+        <NamedIndividual IRI="#suresh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/vendor"/>
+        <NamedIndividual IRI="#veena"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/best_seller"/>
+        <NamedIndividual IRI="#watch"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/ordered_by"/>
+        <NamedIndividual IRI="#airpods"/>
+        <NamedIndividual IRI="#jagan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/place_order"/>
+        <NamedIndividual IRI="#amay"/>
+        <NamedIndividual IRI="#order1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/delivers"/>
+        <NamedIndividual IRI="#aniket"/>
+        <NamedIndividual IRI="#order5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/has_product"/>
+        <NamedIndividual IRI="#apple"/>
+        <NamedIndividual IRI="#iphone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/cancel_order"/>
+        <NamedIndividual IRI="#gaurav"/>
+        <NamedIndividual IRI="#order7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/contains"/>
+        <NamedIndividual IRI="#order1"/>
+        <NamedIndividual IRI="#iphone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/contains"/>
+        <NamedIndividual IRI="#order2"/>
+        <NamedIndividual IRI="#macbook"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/sold_by"/>
+        <NamedIndividual IRI="#order2"/>
+        <NamedIndividual IRI="#veena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/contains"/>
+        <NamedIndividual IRI="#order3"/>
+        <NamedIndividual IRI="#airpods"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/discount_provided_by"/>
+        <NamedIndividual IRI="#order3"/>
+        <NamedIndividual IRI="#veena"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/sold_to"/>
+        <NamedIndividual IRI="#order3"/>
+        <NamedIndividual IRI="#sri_ram"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/contains"/>
+        <NamedIndividual IRI="#order4"/>
+        <NamedIndividual IRI="#playstation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/has_orderstatus"/>
+        <NamedIndividual IRI="#order4"/>
+        <NamedIndividual IRI="#sship1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_paymentmethod"/>
+        <NamedIndividual IRI="#order5"/>
+        <NamedIndividual IRI="#sbicard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_shipping_option"/>
+        <NamedIndividual IRI="#order5"/>
+        <NamedIndividual IRI="#apr24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/delivered_by"/>
+        <NamedIndividual IRI="#order5"/>
+        <NamedIndividual IRI="#aniket"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/has_shippinginfo"/>
+        <NamedIndividual IRI="#order5"/>
+        <NamedIndividual IRI="#address1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_billinginformation"/>
+        <NamedIndividual IRI="#order6"/>
+        <NamedIndividual IRI="#pay1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/contains"/>
+        <NamedIndividual IRI="#order6"/>
+        <NamedIndividual IRI="#watch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/contains"/>
+        <NamedIndividual IRI="#order7"/>
+        <NamedIndividual IRI="#shoes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/delivers"/>
+        <NamedIndividual IRI="#raj"/>
+        <NamedIndividual IRI="#order1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/has_shippinginfo"/>
+        <NamedIndividual IRI="#raj"/>
+        <NamedIndividual IRI="#shipp23"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/delivers"/>
+        <NamedIndividual IRI="#rajesh"/>
+        <NamedIndividual IRI="#order1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/has_address"/>
+        <NamedIndividual IRI="#rishabh"/>
+        <NamedIndividual IRI="#chennai"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/place_order"/>
+        <NamedIndividual IRI="#rishabh"/>
+        <NamedIndividual IRI="#order6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/has_subscription"/>
+        <NamedIndividual IRI="#satish"/>
+        <NamedIndividual IRI="#prime1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/place_order"/>
+        <NamedIndividual IRI="#satish"/>
+        <NamedIndividual IRI="#order4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/ordered_by"/>
+        <NamedIndividual IRI="#shoes"/>
+        <NamedIndividual IRI="#gaurav"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/place_order"/>
+        <NamedIndividual IRI="#sri_ram"/>
+        <NamedIndividual IRI="#order3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/place_order"/>
+        <NamedIndividual IRI="#suresh"/>
+        <NamedIndividual IRI="#order2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/sells"/>
+        <NamedIndividual IRI="#venu"/>
+        <NamedIndividual IRI="#order1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has_billinginformation"/>
+        <NamedIndividual IRI="#watch"/>
+        <NamedIndividual IRI="#pay1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#iphone"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">75000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#macbook"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">150000.0</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_billinginformation"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/belongs_to"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/cancel_order"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/contains"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/delivered_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/delivers"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/delivers_to"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/discount_provided_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/has_address"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/has_orderstatus"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/has_product"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/has_shippinginfo"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/has_subscription"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/ordered_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/place_order"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/sells"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/sold_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="/sold_to"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/delivered_by"/>
+        <ObjectProperty IRI="/delivers"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/ordered_by"/>
+        <ObjectProperty IRI="/place_order"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/sells"/>
+        <ObjectProperty IRI="/sold_by"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_billinginformation"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_paymentmethod"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_shipping_option"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/belongs_to"/>
+        <Class IRI="/product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/cancel_order"/>
+        <Class IRI="/customer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/contains"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/delivered_by"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/delivers"/>
+        <Class IRI="/delivery_agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/delivers_to"/>
+        <Class IRI="/delivery_agent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/discount_provided_by"/>
+        <Class IRI="/offered_product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/has_address"/>
+        <Class IRI="/customer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/has_orderstatus"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/has_product"/>
+        <Class IRI="/brand"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/has_shippinginfo"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/has_subscription"/>
+        <Class IRI="/prime_customer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/ordered_by"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/place_order"/>
+        <Class IRI="/customer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/sells"/>
+        <Class IRI="/vendor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/sold_by"/>
+        <Class IRI="/product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/sold_to"/>
+        <Class IRI="/prime_offered"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_billinginformation"/>
+        <Class IRI="/billing_information"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_paymentmethod"/>
+        <Class IRI="/payment_method"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_shipping_option"/>
+        <Class IRI="/shipping_options"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/belongs_to"/>
+        <Class IRI="/brand"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/cancel_order"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/contains"/>
+        <Class IRI="/product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/delivered_by"/>
+        <Class IRI="/delivery_agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/delivers"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/delivers_to"/>
+        <Class IRI="/shipping_info"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/discount_provided_by"/>
+        <Class IRI="/vendor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/has_address"/>
+        <Class IRI="/address"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/has_orderstatus"/>
+        <Class IRI="/order_status"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/has_product"/>
+        <Class IRI="/product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/has_shippinginfo"/>
+        <Class IRI="/shipping_info"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/has_subscription"/>
+        <Class IRI="/prime_subscription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/ordered_by"/>
+        <Class IRI="/customer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/place_order"/>
+        <Class IRI="/order"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/sells"/>
+        <Class IRI="/product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/sold_by"/>
+        <Class IRI="/vendor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/sold_to"/>
+        <Class IRI="/prime_customer"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#category"/>
+        <Class IRI="/product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class IRI="/product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_country"/>
+        <Class IRI="/customer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="/customer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#price"/>
+        <Class IRI="/product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#product_name"/>
+        <Class IRI="/product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#product_rating"/>
+        <Class IRI="/product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#quantity"/>
+        <Class IRI="/product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#vendor_rating"/>
+        <Class IRI="/vendor"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#category"/>
+        <Datatype abbreviatedIRI="rdf:langString"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#description"/>
+        <Datatype abbreviatedIRI="rdf:langString"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_country"/>
+        <Datatype abbreviatedIRI="rdf:langString"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="rdf:langString"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#price"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#product_name"/>
+        <Datatype abbreviatedIRI="rdf:langString"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#product_rating"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#quantity"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#vendor_rating"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

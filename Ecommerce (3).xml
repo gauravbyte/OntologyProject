@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Ecommerce [
+
+    <!ELEMENT Ecommerce (Customer+, Product+, Order+,Vendor+,Delivery_agent+)>
+
+    <!ELEMENT Customer (Email, Password, Name, Address+,   Gender?,Payment_info*,Phone_number+)>
+    <!ATTLIST Customer Customer_id ID #REQUIRED
+    >
+    
+    <!ELEMENT Payment_info (Credit_card_number, Expiry_date)>
+
+    <!ELEMENT Vendor (Name, Address+, Vendor_rating,Phone_number+)>
+    <!ATTLIST Vendor
+        Vendor_id ID #REQUIRED
+        Type CDATA #IMPLIED
+    >
+
+    <!ELEMENT Delivery_agent (Name, Email, Phone_number)>
+    <!ATTLIST Delivery_agent Delivery_agent_id ID #REQUIRED
+    >
+
+    <!ELEMENT Product (Product_name, Product_type, Product_rating?, Product_review*, Price, Size*, Color*)>
+    <!ATTLIST Product Product_id ID #REQUIRED
+                Vendor_id IDREF #REQUIRED
+    >
+
+    <!ELEMENT Order (Product_id+, Arriving_date, Amount,Order_status, Payment_type, Shipping_info)>
+    <!ATTLIST Order
+        Order_id ID #REQUIRED
+        Customer_id IDREF #REQUIRED
+        Delivery_agent_id IDREF #REQUIRED 
+    >
+    <!ELEMENT Order_status (#PCDATA)>
+    <!ELEMENT Payment_type (#PCDATA | Online_payment)*>
+    <!ELEMENT Online_payment (Transaction_id,Gateway_name )>
+    <!ELEMENT Shipping_info (Name, Address, Phone_number)>
+    <!ELEMENT Email (#PCDATA)>
+    <!ELEMENT Password (#PCDATA)>
+    <!ELEMENT Name (First_name,Middle_name?,Last_name)>
+    <!ELEMENT First_name (#PCDATA)>
+    <!ELEMENT Middle_name (#PCDATA)>
+    <!ELEMENT Last_name (#PCDATA)>
+    <!ELEMENT Address (Street,City,State,Pincode)>
+    <!ELEMENT Street (#PCDATA)>
+    <!ELEMENT City (#PCDATA)>
+    <!ELEMENT State (#PCDATA)>
+    <!ELEMENT Pincode (#PCDATA)>
+    <!ELEMENT Gender (#PCDATA) >
+    <!ELEMENT Credit_card_number (#PCDATA)>
+    <!ELEMENT Expiry_date (#PCDATA)>
+    <!ELEMENT Phone_number (#PCDATA)>
+    <!ELEMENT Vendor_rating (#PCDATA)>
+    <!ELEMENT Product_name (#PCDATA)>
+    <!ELEMENT Product_type (#PCDATA)>
+    <!ELEMENT Product_rating (#PCDATA)>
+    <!ELEMENT Product_review (#PCDATA)>
+    <!ELEMENT Product_id (#PCDATA)>
+    <!ELEMENT Price (#PCDATA)>
+    <!ELEMENT Size (#PCDATA)>
+    <!ELEMENT Color (#PCDATA)>
+    <!ELEMENT Arriving_date (#PCDATA)>
+    <!ELEMENT Amount (#PCDATA)>
+    <!ELEMENT Gateway_name (#PCDATA)>
+    <!ELEMENT Transaction_id (#PCDATA)>
+]>
+
+
+<Ecommerce>
+    <Customer Customer_id="c001">
+        <Email>arjun.singh@example.com</Email>
+        <Password>password123</Password>
+        <Name>
+            <First_name>Arjun</First_name>
+            <Middle_name>Kumar</Middle_name>
+            <Last_name>Singh</Last_name>
+        </Name>
+        <Address>
+            <Street>123 Main St</Street>
+            <City>Bangalore</City>
+            <State>Karnataka</State>
+            <Pincode>560001</Pincode>
+        </Address>
+        <Gender>male</Gender>
+        <Payment_info>
+            <Credit_card_number>1234567890123456</Credit_card_number>
+            <Expiry_date>12/25</Expiry_date>
+        </Payment_info>
+        <Phone_number>+91 9876543210</Phone_number>
+    </Customer>
+    <Customer Customer_id="c002">
+        <Email>jane.smith@example.com</Email>
+        <Password>password456</Password>
+        <Name>
+            <First_name>Jane</First_name>
+            <Last_name>Smith</Last_name>
+        </Name>
+        <Address>
+            <Street>456 Oak Ave</Street>
+            <City>Mumbai</City>
+            <State>Maharashtra</State>
+            <Pincode>400001</Pincode>
+        </Address>
+        <Gender>female</Gender>
+        <Payment_info>
+            <Credit_card_number>2345678901234567</Credit_card_number>
+            <Expiry_date>10/26</Expiry_date>
+        </Payment_info>
+        <Phone_number>+91 8765432109</Phone_number>
+    </Customer>
+    <Customer Customer_id="c003">
+        <Email>alex.jones@example.com</Email>
+        <Password>password789</Password>
+        <Name>
+            <First_name>Alex</First_name>
+            <Last_name>Jones</Last_name>
+        </Name>
+        <Address>
+            <Street>789 Maple Rd</Street>
+            <City>Chennai</City>
+            <State>Tamil Nadu</State>
+            <Pincode>600001</Pincode>
+        </Address>
+        <Gender>male</Gender>
+        <Payment_info>
+            <Credit_card_number>3456789012345678</Credit_card_number>
+            <Expiry_date>05/24</Expiry_date>
+        </Payment_info>
+        <Phone_number>+91 7654321098</Phone_number>
+    </Customer>
+    <Customer Customer_id="c004">
+        <Email>sara.lee@example.com</Email>
+        <Password>password321</Password>
+        <Name>
+            <First_name>Sara</First_name>
+            <Middle_name>Jane</Middle_name>
+            <Last_name>Lee</Last_name>
+        </Name>
+        <Address>
+            <Street>321 Elm St</Street>
+            <City>Delhi</City>
+            <State>Delhi</State>
+            <Pincode>110001</Pincode>
+        </Address>
+        <Gender>female</Gender>
+        <Payment_info>
+            <Credit_card_number>4567890123456789</Credit_card_number>
+            <Expiry_date>09/23</Expiry_date>
+        </Payment_info>
+        <Phone_number>+91 9876543211</Phone_number>
+    </Customer>
+    <Customer Customer_id="c005">
+        <Email>michael.nguyen@example.com</Email>
+        <Password>password654</Password>
+        <Name>
+            <First_name>Michael</First_name>
+            <Last_name>Nguyen</Last_name>
+        </Name>
+        <Address>
+            <Street>654 Pine St</Street>
+            <City>Kolkata</City>
+            <State>West Bengal</State>
+            <Pincode>700001</Pincode>
+        </Address>
+        <Gender>male</Gender>
+        <Payment_info>
+            <Credit_card_number>5678901234567890</Credit_card_number>
+            <Expiry_date>02/27</Expiry_date>
+        </Payment_info>
+        <Phone_number>+91 8765432110</Phone_number>
+    </Customer>
+    <Product Product_id="p001" Vendor_id="v003">
+        <Product_name>Smartphone</Product_name>
+        <Product_type>Electronics</Product_type>
+        <Product_rating>4.5</Product_rating>
+        <Product_review>Great phone for the price</Product_review>
+        <Price>20000</Price>
+        <Size>6.4</Size>
+        <Color>Black</Color>
+    </Product>
+
+    <Product Product_id="p002" Vendor_id="v004">
+        <Product_name>Laptop</Product_name>
+        <Product_type>Electronics</Product_type>
+        <Product_rating>4.2</Product_rating>
+        <Product_review>Excellent laptop for work and gaming</Product_review>
+        <Price>60000</Price>
+        <Size>15.6</Size>
+        <Color>Silver</Color>
+    </Product>
+    <Product Product_id="p003" Vendor_id="v001">
+        <Product_name>Running Shoes</Product_name>
+        <Product_type>Sporting Goods</Product_type>
+        <Product_rating>4.8</Product_rating>
+        <Product_review>Comfortable and durable shoes for running</Product_review>
+        <Price>5000</Price>
+        <Size>9</Size>
+        <Color>Blue</Color>
+    </Product>
+    <Product Product_id="p004" Vendor_id="v002">
+        <Product_name>Television</Product_name>
+        <Product_type>Electronics</Product_type>
+        <Product_rating>4.6</Product_rating>
+        <Product_review>Great picture quality and sound</Product_review>
+        <Price>80000</Price>
+        <Size>55</Size>
+        <Color>Black</Color>
+    </Product>
+    <Product Product_id="p005" Vendor_id="v007">
+        <Product_name>Tennis Racket</Product_name>
+        <Product_type>Sporting Goods</Product_type>
+        <Product_rating>4.4</Product_rating>
+        <Product_review>Lightweight and powerful racket for advanced players</Product_review>
+        <Price>10000</Price>
+        <Size>27</Size>
+        <Color>Red</Color>
+    </Product>
+    <Product Product_id="p006" Vendor_id="v005">
+        <Product_name>Dress</Product_name>
+        <Product_type>Clothing</Product_type>
+        <Product_rating>4.7</Product_rating>
+        <Product_review>Elegant and comfortable dress for special occasions</Product_review>
+        <Price>4000</Price>
+        <Size>Medium</Size>
+        <Color>Green</Color>
+    </Product>
+    <Product Product_id="p007" Vendor_id="v006">
+        <Product_name>Coffee Maker</Product_name>
+        <Product_type>Appliances</Product_type>
+        <Product_rating>4.3</Product_rating>
+        <Product_review>Easy to use and makes great coffee</Product_review>
+        <Price>3000</Price>
+        <Size>1.5 L</Size>
+        <Color>Stainless Steel</Color>
+    </Product>
+    <Order Order_id="o001" Customer_id="c001"
+        Delivery_agent_id="d001">
+        <Product_id>p001</Product_id>
+        <Arriving_date>2023-03-05</Arriving_date>
+        <Amount>20000</Amount>
+        <Order_status> Shipped </Order_status>
+        <Payment_type> COD</Payment_type>
+        <Shipping_info>
+            <Name>
+                <First_name>Deva</First_name>
+                <Middle_name>Munna</Middle_name>
+                <Last_name>Singh</Last_name>
+            </Name>
+            <Address>
+                <Street>123 Main St</Street>
+                <City>Bangalore</City>
+                <State>Karnataka</State>
+                <Pincode>560001</Pincode>
+            </Address>
+            <Phone_number>+91 9876543210</Phone_number>
+        </Shipping_info>
+    </Order> 
+   <Order Order_id="o002"
+        Customer_id="c002" Delivery_agent_id="d002">
+        <Product_id>p002</Product_id>
+        <Arriving_date>2023-03-07</Arriving_date>
+        <Amount>60000</Amount>
+        <Order_status>Delivered</Order_status>
+        <Payment_type>Credit Card</Payment_type>
+        <Shipping_info>
+            <Name>
+                <First_name>Amy</First_name>
+                <Middle_name>Elizabeth</Middle_name>
+                <Last_name>Smith</Last_name>
+            </Name>
+            <Address>
+                <Street>456 High St</Street>
+                <City>Mumbai</City>
+                <State>Maharashtra</State>
+                <Pincode>400001</Pincode>
+            </Address>
+            <Phone_number>+91 9876543211</Phone_number>
+        </Shipping_info>
+    </Order>
+<Order
+        Order_id="o003" Customer_id="c003" Delivery_agent_id="d003">
+        <Product_id>p003</Product_id>
+        <Arriving_date>2023-03-10</Arriving_date>
+        <Amount>5000</Amount>
+        <Order_status>Processing</Order_status>
+        <Payment_type>Debit Card</Payment_type>
+        <Shipping_info>
+            <Name>
+                <First_name>John</First_name>
+                <Middle_name>William</Middle_name>
+                <Last_name>Doe</Last_name>
+            </Name>
+            <Address>
+                <Street>789 Oak St</Street>
+                <City>Chennai</City>
+                <State>Tamil Nadu</State>
+                <Pincode>600001</Pincode>
+            </Address>
+            <Phone_number>+91 9876543212</Phone_number>
+        </Shipping_info>
+    </Order>
+<Order
+        Order_id="o004" Customer_id="c001" Delivery_agent_id="d004">
+        <Product_id>p004</Product_id>
+        <Arriving_date>2023-03-06</Arriving_date>
+        <Amount>80000</Amount>
+        <Order_status>Delivered</Order_status>
+        <Payment_type>Net Banking</Payment_type>
+        <Shipping_info>
+            <Name>
+                <First_name>Deva</First_name>
+                <Middle_name>Munna</Middle_name>
+                <Last_name>Singh</Last_name>
+            </Name>
+            <Address>
+                <Street>123 Main St</Street>
+                <City>Bangalore</City>
+                <State>Karnataka</State>
+                <Pincode>560001</Pincode>
+            </Address>
+            <Phone_number>+91 9876543210</Phone_number>
+        </Shipping_info>
+    </Order>
+<Order
+        Order_id="o005" Customer_id="c002" Delivery_agent_id="d005">
+        <Product_id>p005</Product_id>
+        <Arriving_date>2023-03-08</Arriving_date>
+        <Amount>10000</Amount>
+        <Order_status>Shipped</Order_status>
+        <Payment_type>Paytm</Payment_type>
+        <Shipping_info>
+            <Name>
+                <First_name>Amy</First_name>
+                <Middle_name>Elizabeth</Middle_name>
+                <Last_name>Smith</Last_name>
+            </Name>
+            <Address>
+                <Street>456 High St</Street>
+                <City>Mumbai</City>
+                <State>Maharashtra</State>
+                <Pincode>400001</Pincode>
+            </Address>
+
+            <Phone_number>+91 9876543211</Phone_number>
+        </Shipping_info>
+
+    </Order>
+<Order
+        Order_id="o006" Customer_id="c003" Delivery_agent_id="d001">
+        <Product_id>p006</Product_id>
+        <Arriving_date>2023-03-12</Arriving_date>
+        <Amount>15000</Amount>
+        <Order_status>Cancelled</Order_status>
+        <Payment_type>Debit Card</Payment_type>
+        <Shipping_info>
+            <Name>
+                <First_name>John</First_name>
+                <Middle_name>William</Middle_name>
+                <Last_name>Doe</Last_name>
+            </Name>
+            <Address>
+                <Street>789 Oak St</Street>
+                <City>Chennai</City>
+                <State>Tamil Nadu</State>
+                <Pincode>600001</Pincode>
+            </Address>
+            <Phone_number>+91 9876543212</Phone_number>
+        </Shipping_info>
+    </Order>
+<Order
+        Order_id="o007" Customer_id="c001" Delivery_agent_id="d002">
+        <Product_id>p002</Product_id>
+        <Arriving_date>2023-03-09</Arriving_date>
+        <Amount>60000</Amount>
+        <Order_status>Processing</Order_status>
+        <Payment_type>Credit Card</Payment_type>
+        <Shipping_info>
+            <Name>
+                <First_name>Deva</First_name>
+                <Middle_name>Munna</Middle_name>
+                <Last_name>Singh</Last_name>
+            </Name>
+            <Address>
+                <Street>123 Main St</Street>
+                <City>Bangalore</City>
+                <State>Karnataka</State>
+                <Pincode>560001</Pincode>
+            </Address>
+            <Phone_number>+91 9876543210</Phone_number>
+        </Shipping_info>
+    </Order>
+<Vendor
+        Vendor_id="v001" Type="Retailer">
+        <Name>
+            <First_name>Rupali</First_name>
+            <Middle_name>Mary</Middle_name>
+            <Last_name>Daali</Last_name>
+        </Name>
+        <Address>
+            <Street>456 5th Ave</Street>
+            <City>Mumbai</City>
+            <State>Maharashtra</State>
+            <Pincode>400001</Pincode>
+        </Address>
+        <Vendor_rating>4.0</Vendor_rating>
+        <Phone_number>+91 9876543210</Phone_number>
+    </Vendor>
+<Vendor Vendor_id="v002"
+        Type="Wholesaler">
+        <Name>
+            <First_name>John</First_name>
+            <Middle_name>William</Middle_name>
+            <Last_name>Doe</Last_name>
+        </Name>
+        <Address>
+            <Street>789 Oak St</Street>
+            <City>Chennai</City>
+            <State>Tamil Nadu</State>
+            <Pincode>600001</Pincode>
+        </Address>
+        <Vendor_rating>3.5</Vendor_rating>
+        <Phone_number>+91 9876543211</Phone_number>
+    </Vendor>
+<Vendor Vendor_id="v003"
+        Type="Distributor">
+        <Name>
+            <First_name>Michael</First_name>
+            <Middle_name>James</Middle_name>
+            <Last_name>Scott</Last_name>
+        </Name>
+        <Address>
+            <Street>321 Main St</Street>
+            <City>Kolkata</City>
+            <State>West Bengal</State>
+            <Pincode>700001</Pincode>
+        </Address>
+        <Vendor_rating>4.5</Vendor_rating>
+        <Phone_number>+91 9876543212</Phone_number>
+    </Vendor>
+<Vendor Vendor_id="v004"
+        Type="Manufacturer">
+        <Name>
+            <First_name>Samantha</First_name>
+            <Middle_name>Rose</Middle_name>
+            <Last_name>Johnson</Last_name>
+        </Name>
+        <Address>
+            <Street>789 High St</Street>
+            <City>Bangalore</City>
+            <State>Karnataka</State>
+            <Pincode>560001</Pincode>
+        </Address>
+        <Vendor_rating>4.8</Vendor_rating>
+        <Phone_number>+91 9876543213</Phone_number>
+    </Vendor>
+<Vendor Vendor_id="v005"
+        Type="Retailer">
+        <Name>
+            <First_name>Alice</First_name>
+            <Middle_name>Louise</Middle_name>
+            <Last_name>Clark</Last_name>
+        </Name>
+        <Address>
+            <Street>456 Main St</Street>
+            <City>Delhi</City>
+            <State>Delhi</State>
+            <Pincode>110001</Pincode>
+        </Address>
+        <Vendor_rating>4.2</Vendor_rating>
+        <Phone_number>+91 9876543214</Phone_number>
+    </Vendor>
+<Vendor Vendor_id="v006"
+        Type="Wholesaler">
+        <Name>
+            <First_name>Robert</First_name>
+            <Middle_name>Michael</Middle_name>
+            <Last_name>Johnson</Last_name>
+        </Name>
+        <Address>
+            <Street>789 1st St</Street>
+            <City>Mumbai</City>
+            <State>Maharashtra</State>
+            <Pincode>400001</Pincode>
+        </Address>
+        <Vendor_rating>3.8</Vendor_rating>
+        <Phone_number>+91 9876543215</Phone_number>
+    </Vendor>
+<Vendor Vendor_id="v007"
+        Type="Distributor">
+        <Name>
+            <First_name>Emily</First_name>
+            <Middle_name>Jane</Middle_name>
+            <Last_name>Smith</Last_name>
+        </Name>
+        <Address>
+            <Street>123 High St</Street>
+            <City>Chennai</City>
+            <State>Tamil Nadu</State>
+            <Pincode>600001</Pincode>
+        </Address>
+        <Vendor_rating>4.1</Vendor_rating>
+        <Phone_number>+91 9876543215</Phone_number>
+    </Vendor>
+<Delivery_agent
+        Delivery_agent_id="d001">
+        <Name>
+            <First_name>Suresh</First_name>
+            <Middle_name>Ramesh</Middle_name>
+            <Last_name>Singh</Last_name>
+        </Name>
+        <Email>rajesh.kumar@example.com</Email>
+        <Phone_number>+91 9876543210</Phone_number>
+    </Delivery_agent>
+<Delivery_agent
+        Delivery_agent_id="d002">
+        <Name>
+            <First_name>Amit</First_name>
+            <Middle_name>Kumar</Middle_name>
+            <Last_name>Singh</Last_name>
+        </Name>
+        <Email>amit.singh@example.com</Email>
+        <Phone_number>+91 8765432109</Phone_number>
+    </Delivery_agent>
+
+<Delivery_agent
+        Delivery_agent_id="d003">
+        <Name>
+            <First_name>Rajesh</First_name>
+            <Middle_name>Kumar</Middle_name>
+            <Last_name>Verma</Last_name>
+        </Name>
+        <Email>rajesh.verma@example.com</Email>
+        <Phone_number>+91 7654321098</Phone_number>
+    </Delivery_agent>
+
+<Delivery_agent
+        Delivery_agent_id="d004">
+        <Name>
+            <First_name>Manoj</First_name>
+            <Middle_name>Kumar</Middle_name>
+            <Last_name>Gupta</Last_name>
+        </Name>
+        <Email>manoj.gupta@example.com</Email>
+        <Phone_number>+91 6543210987</Phone_number>
+    </Delivery_agent>
+
+<Delivery_agent
+        Delivery_agent_id="d005">
+        <Name>
+            <First_name>Pooja</First_name>
+            <Middle_name>Kumari</Middle_name>
+            <Last_name>Sharma</Last_name>
+        </Name>
+        <Email>pooja.sharma@example.com</Email>
+        <Phone_number>+91 5432109876</Phone_number>
+    </Delivery_agent>
+
+<Delivery_agent
+        Delivery_agent_id="d006">
+        <Name>
+            <First_name>Sanjay</First_name>
+            <Middle_name>Kumar</Middle_name>
+            <Last_name>Goyal</Last_name>
+        </Name>
+        <Email>sanjay.goyal@example.com</Email>
+        <Phone_number>+91 4321098765</Phone_number>
+    </Delivery_agent>
+</Ecommerce>
